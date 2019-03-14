@@ -10,14 +10,14 @@ class Form extends React.Component{
 				<div className="div1">
 					<label className="label1"></label>
 					<div>
-						<input className="input" ref="username" placeholder="Phone number, username or email" defaultValue={this.props.username}/>
+						<input className="input" ref={input => this._username = input} value={this.props.username} onChange={this.updateU}  placeholder="Phone number, username or email"/>
 					</div>	
 				</div>
 
 				<div className="div1">
 					<label className="label2"></label>
 					<div>
-						<input className="input" ref="password" placeholder="Password"/>
+						<input className="input" ref={input => this._password = input} placeholder="Password"/>
 					</div>	
 				</div>
 
@@ -33,14 +33,14 @@ class Form extends React.Component{
 				<div className="div1">
 					<label className="label1"></label>
 					<div>
-						<input className="input" ref={input => this.asdf = input} value={this.props.username} onChange={this.update}  placeholder="Phone number, username or email"/>
+						<input className="input" ref={input => this._username = input} value={this.props.username} onChange={this.updateU}  placeholder="Phone number, username or email"/>
 					</div>	
 				</div>
 
 				<div className="div1">
 					<label className="label2"></label>
 					<div>
-						<input className="input" ref="password" placeholder="Password"/>
+						<input className="input" ref={input => this._password = input} placeholder="Password"/>
 					</div>	
 				</div>
 
@@ -52,9 +52,9 @@ class Form extends React.Component{
 		}
 	}
 
-	update=()=>{
-		console.log(this.asdf.value);
-		this.props.UU(this.asdf.value);
+	updateU=()=>{
+		console.log(this._username.value);
+		this.props.UU(this._username.value);
 	}
 }
 

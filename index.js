@@ -32,7 +32,7 @@ class Login extends React.Component{
 		});
 
 
-		if(this.state.username.length > 0){
+		if(this.state.username != ""){
 			this.setState({
 				canClick:true
 			})
